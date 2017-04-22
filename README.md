@@ -30,3 +30,19 @@ The path to the driver executable must be set by the webdriver.gecko.driver syst
 have to download the gecko driver for specific browser and set property in code level as
 System.setProperty(“webdriver.geco.driver”,”c:\\selenium\\geckodriver.exe”);
 download this from http://www.seleniumhq.org/download/, click on version and dnld for mac
+
+
+To work with Firefox we have to add geckodriver not firefox driver
+
+DEPENDENCY
+	<dependency>
+    	<groupId>org.seleniumhq.selenium</groupId>
+   		 <artifactId>selenium-firefox-driver</artifactId>
+    	<version>3.3.0</version>
+		</dependency>
+
+CODE
+	System.setProperty("webdriver.gecko.driver","/Users/sandeshlamsal/Downloads/geckodriver");
+        WebDriver wd=new FirefoxDriver();
+        wd.get("http://www.sandeshlamsal.com.np");
+	
