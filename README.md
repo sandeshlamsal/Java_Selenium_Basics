@@ -10,3 +10,23 @@ WebDriver is designed to provide a simpler, more concise programming interface i
 
 Selenium-WebDriver makes direct calls to the browser using each browser’s native support for automation
 
+
+Test Selenium code for Chrome Browser
+used maven :
+		<dependency>
+		    <groupId>org.seleniumhq.selenium</groupId>
+		    <artifactId>selenium-chrome-driver</artifactId>
+		    <version>3.3.0</version>
+		</dependency>
+
+ public static void main( String[] args )
+    {
+	System.setProperty("webdriver.chrome.driver","/Users/sandeshlamsal/Downloads/chromedriver");
+        WebDriver wd=new ChromeDriver();  // initially throws error or chromedriver exe has to be installed
+        wd.get("www.sandeshlamsal.com.np")	
+    }
+To solve, below error
+The path to the driver executable must be set by the webdriver.gecko.driver system property;
+have to download the gecko driver for specific browser and set property in code level as
+System.setProperty(“webdriver.geco.driver”,”c:\\selenium\\geckodriver.exe”);
+download this from http://www.seleniumhq.org/download/, click on version and dnld for mac
